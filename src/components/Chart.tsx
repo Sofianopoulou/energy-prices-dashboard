@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -28,29 +27,9 @@ interface TimeSeriesData {
   ENTSOE_FR_DAM_Price: string;
 }
 
-const Chart = () => {
-  const [data, setData] = useState<TimeSeriesData[]>([]);
-
-  useEffect(() => {
-    fetch("/src/assets/timeseries.json")
-      .then((res) => res.json())
-      .then((json) => setData(json));
-  }, []);
-
-  const formatDateTime = (date: string) => {
-    const dateObj = new Date(date);
-    return `${dateObj.getDate().toString().padStart(2, "0")}-${(
-      dateObj.getMonth() + 1
-    )
-      .toString()
-      .padStart(2, "0")}-${dateObj.getFullYear()} ${dateObj
-      .getHours()
-      .toString()
-      .padStart(2, "0")}:${dateObj.getMinutes().toString().padStart(2, "0")}`;
-  };
-
+const Chart = ({ data }: { data: TimeSeriesData[] }) => {
   const chartData = {
-    labels: data.map((item) => formatDateTime(item.DateTime)),
+    labels: data.map((item) => item.DateTime),
     datasets: [
       {
         label: "ENTSOE DE Price",
