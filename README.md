@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Energy Price Dashboard
 
 ## 📌 Project Overview  
