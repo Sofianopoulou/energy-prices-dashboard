@@ -1,4 +1,3 @@
-// src/hooks/useTimeSeriesData.ts
 import { useState, useEffect } from "react";
 
 interface TimeSeriesData {
