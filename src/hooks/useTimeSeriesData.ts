@@ -26,7 +26,7 @@ const useTimeSeriesData = () => {
   const [endDate, setEndDate] = useState<string>("");
 
   useEffect(() => {
-    fetch("/src/assets/timeseries.json")
+    fetch("/timeseries.json")
       .then((res) => res.json())
       .then((json) => {
         const formattedData = json.map((item: TimeSeriesData) => ({
