@@ -16,7 +16,7 @@ const DateFilter = ({
       <div className="flex flex-col items-center md:items-start gap-2">
         <label
           htmlFor="start-date"
-          className="text-xl font-semibold text-gray-700"
+          className="text-xl font-semibold text-gray-00"
         >
           Start Date:
         </label>
