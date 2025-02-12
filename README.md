@@ -4,6 +4,8 @@
 This project is a web-based dashboard that displays energy price data in a structured format. It consists of:  
 - A **table** that presents timeseries data.  
 - A **line chart** for visualizing trends in energy prices over time.
+- A date range picker that allows users to filter the data in the table and the chart based on a selected start and end date.
+- Checkboxes for each timeseries, enabling users to show or hide specific timeseries in both the table and the chart.
 
 ## 🚀 Features  
 ### 1️⃣ Data Representation  
